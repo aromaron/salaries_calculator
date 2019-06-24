@@ -8,18 +8,13 @@ module Api
       private
 
       def team_params
-        params.require(_json: [:nombre,
-                               :nivel,
-                               :goles,
-                               :sueldo,
-                               :bono,
-                               :equipo]).permit(_json: [:nombre,
-                                                  :nivel,
-                                                  :goles,
-                                                  :sueldo,
-                                                  :bono,
-                                                  :sueldo_completo,
-                                                  :equipo])
+        params.permit(_json: [:nombre,
+                              :nivel,
+                              :goles,
+                              :sueldo,
+                              :bono,
+                              :sueldo_completo,
+                              :equipo])
       end
     end
   end
