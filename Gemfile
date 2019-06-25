@@ -3,8 +3,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
 
-
-gem 'bootsnap', '>= 1.1.0', require: false
 gem 'puma', '~> 3.11'
 gem 'rack-attack'
 gem 'rack-cors'
