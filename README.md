@@ -16,25 +16,24 @@ Salaries Calculator is a Rails api only that allows to calculate a team's player
   - 5.2.3
 
 * System dependencies
-  - Postgres
+  - [Bundler](https://bundler.io)
 
 * Configuration
 ```ruby
   # first clone this project
   $ cd project
   $ bundle install
-  $ rails db:setup && rails db:migrate
+```
+
+* Run locally
+```ruby
+  $ rails s
 ```
 
 * How to run the test suite
 ```ruby
   # on your project dir
   $ rspec spec
-```
-
-* Run locally
-```ruby
-  $ rails s
 ```
 
 * Make requests locally via curl
