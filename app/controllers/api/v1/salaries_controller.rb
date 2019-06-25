@@ -2,7 +2,12 @@ module Api
   module V1
     class SalariesController < ApplicationController
       def index
-        render json: SalaryCalculatorService.call(team_params[:_json]), status: 200
+        data = SalaryCalculatorService.call(team_params[:_json])
+        if data[:team].nil?
+          render json: { message: 'Mising attributes, required attributes are: sueldo, goles, equipo, nivel, bono' }, status: 402
+        else
+          render json: data[:team], status: 200
+        end
       end
 
       private
