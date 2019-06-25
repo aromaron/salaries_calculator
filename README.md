@@ -80,6 +80,16 @@ Salaries Calculator is a Rails api only that allows to calculate a team's player
           "bono": 15000,
           "sueldo_completo": null,
           "equipo": "rojo"
+      },
+      {
+          "nombre": "El Otro equipo",
+          "nivel": "B",
+          "goles": 9,
+          "sueldo": 30000,
+          "bono": 15000,
+          "sueldo_completo": null,
+          "goles_minimos": 20,
+          "equipo": "not FC"
       }
   ]'
 ```
@@ -127,6 +137,16 @@ Salaries Calculator is a Rails api only that allows to calculate a team's player
           "bono": 15000,
           "sueldo_completo": null,
           "equipo": "rojo"
+      },
+      {
+          "nombre": "El Otro equipo",
+          "nivel": "B",
+          "goles": 9,
+          "sueldo": 30000,
+          "bono": 15000,
+          "sueldo_completo": null,
+          "goles_minimos": 20,
+          "equipo": "not FC"
       }
   ]'
 ```
