@@ -61,7 +61,7 @@ class SalaryCalculatorService < ApplicationService
   # first we group the current evaluated player team by name
   # then we sum all the goals of this team
   def total_team_goals(equipo)
-    @team.select {|player| player[:equipo] == equipo }.sum {|h| h[:goles].to_i }
+    @team.select { |player| player[:equipo] == equipo }.sum {|h| h[:goles].to_i }
   end
 
   # sums the total of goals expected
