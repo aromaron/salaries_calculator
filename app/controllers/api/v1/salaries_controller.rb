@@ -19,7 +19,8 @@ module Api
                               :sueldo,
                               :bono,
                               :sueldo_completo,
-                              :equipo])
+                              :equipo,
+                              :goles_minimos])
       end
     end
   end

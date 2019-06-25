@@ -17,7 +17,7 @@ class SalaryCalculatorService < ApplicationService
     if valid_object?
       @team.each do |player|
         @player = player
-        player[:goles_minimos] = LEVEL[player[:nivel].downcase.to_sym]
+        player[:goles_minimos] = level_minimum
         player[:sueldo_completo] = calculate_total_salary
       end
       { team: @team, status: :success }
@@ -42,7 +42,7 @@ class SalaryCalculatorService < ApplicationService
   # since individual amount is 50% of total bonus then we do bono / 2
   # then we request the bonus percentage based on players performance
   def individual_bonus_amount
-    ((@player[:bono].to_i / 2) * bonus_percentage(player[:goles].to_i, LEVEL[@player[:nivel].downcase.to_sym])) / 100
+    ((@player[:bono].to_i / 2) * bonus_percentage(player[:goles].to_i, level_minimum)) / 100
   end
 
    # calculates the individual (player) bonus amount
@@ -67,6 +67,10 @@ class SalaryCalculatorService < ApplicationService
   # sums the total of goals expected
   def total_level_goals
     LEVEL.values.sum
+  end
+
+  def level_minimum
+    @player[:goles_minimos] || LEVEL[@player[:nivel].downcase.to_sym]
   end
 
   # validates if any of the required values are nil
