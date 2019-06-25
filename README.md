@@ -20,7 +20,7 @@ Salaries Calculator is a Rails api only that allows to calculate a team's player
 
 * Configuration
 ```ruby
-  # first clone this project
+  $ git clone git@github.com:aromaron/salaries_calculator.git
   $ cd project
   $ bundle install
 ```
